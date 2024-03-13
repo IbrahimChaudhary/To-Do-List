@@ -1,39 +1,8 @@
-//--------------------------->Double of index
-// let arr = [];
-// let a;
-// for (let index = 0; index < 5; index++) {
-//     a = prompt("Enter the number: ");
-//     arr.push(a);
-// }
-// let x =0;
-// do {
-//     let num = arr[x];
-//     let double = parseInt(num)+parseInt(num);
-//     arr[x] = double;
-//     if(arr[x+1]==num){
-//         x = x+1;
-//         console.log("hi");
-//     }
-//     x++;
-// } while (x<5);
-// console.log(arr);
-
-//----------------------------->Reverse of string
-// let a = prompt("Enter your name: ");
-
-// for (let index = a.length - 1; index >= 0 ; index--) {
-
-//     a = a+a[index];
-// }
-// console.log(a);
-
-//-------------------------------->To do List
 let note = JSON.parse(localStorage.getItem("list")) || [];
 let state;
 function saveNoteToLocalStorage() {
   localStorage.setItem("list", JSON.stringify(note));
 }
-//note.forEach((e) => {
 if (note) {
     for (let index = note.length-1; index >= 0; index--) {
       console.log("length: ", note.length-1);
@@ -62,7 +31,6 @@ if (note) {
       }
     }
     saveNoteToLocalStorage();
- // }
 };
 
 document.querySelector("button").addEventListener("click", () => {
